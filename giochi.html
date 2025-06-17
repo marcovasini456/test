@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minigiochi Carlinosi - Il Mondo dei Carlini</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Il Fantastico Mondo dei Carlini</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="storia.html">Storia</a></li>
+                <li><a href="galleria.html">Galleria</a></li>
+                <li><a href="giochi.html">Minigiochi</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Divertiti con i Nostri Minigiochi!</h2>
+        <div id="quiz-container">
+            <div id="quiz-section">
+                <h3>Quiz: Quanto ne sai sui Carlini?</h3>
+                <div id="question-container" class="quiz-question-container"></div>
+                <div id="options-container" class="quiz-options-container"></div>
+                <button id="quiz-next-btn" class="quiz-button">Prossima Domanda</button>
+                <div id="quiz-feedback" class="quiz-feedback"></div>
+                <div id="quiz-score" class="quiz-score"></div>
+            </div>
+        </div>
+        <div id="memory-container">
+            <div id="memory-section" style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ccc;">
+                <h3>Gioco Memory dei Carlini</h3>
+                <div class="memory-info">
+                    <span>Tentativi: <span id="memory-attempts">0</span></span>
+                    <span>Coppie Trovate: <span id="memory-pairs-found">0</span> / <span id="memory-total-pairs">0</span></span>
+                </div>
+                <div id="memory-grid" class="memory-grid-container"></div>
+                <button id="memory-restart-btn" class="memory-button">Ricomincia Gioco</button>
+                <div id="memory-feedback" class="memory-feedback"></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Il Mondo dei Carlini. Contenuti a scopo dimostrativo.</p>
+    </footer>
+    <script src="js/quiz.js"></script>
+    <script src="js/memory.js"></script>
+</body>
+</html>

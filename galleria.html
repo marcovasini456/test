@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galleria di Carlini - Il Mondo dei Carlini</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px; /* Aumentato il gap */
+            justify-content: center;
+            padding: 20px;
+        }
+        .gallery-item {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            background-color: #fff;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+        .gallery-item img {
+            width: 250px; /* Larghezza fissa per uniformità */
+            height: 200px; /* Altezza fissa per uniformità */
+            object-fit: cover; /* Assicura che limmagine copra lo spazio senza distorsioni */
+            border-radius: 4px;
+        }
+        .gallery-item p {
+            text-align: center;
+            font-size: 0.9em;
+            margin-top: 5px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Il Fantastico Mondo dei Carlini</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="storia.html">Storia</a></li>
+                <li><a href="galleria.html">Galleria</a></li>
+                <li><a href="giochi.html">Minigiochi</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Galleria Fotografica dei Carlini</h2>
+        <p>Ammira questi adorabili e buffi esemplari di carlino!</p>
+
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="images/galleria_pug_fulvo1.jpg" alt="Carlino fulvo in posa">
+                <p>Un classico Carlino fulvo.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="images/galleria_pug_nero1.jpg" alt="Carlino nero elegante">
+                <p>Un elegante Carlino nero.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="images/galleria_cucciolo_pug1.jpg" alt="Cucciolo di carlino adorabile">
+                <p>Un tenerissimo cucciolo.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="images/galleria_pug_buffo1.jpg" alt="Carlino con espressione buffa">
+                <p>Buffa espressione!</p>
+            </div>
+            <div class="gallery-item">
+                <img src="images/galleria_gruppo_pugs.jpg" alt="Gruppo di carlini">
+                <p>Un simpatico gruppo di Carlini.</p>
+            </div>
+            <!-- Aggiungi altri gallery-item qui se necessario -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Il Mondo dei Carlini. Contenuti a scopo dimostrativo. Crediti immagini: Wikimedia Commons, Pixabay.</p>
+    </footer>
+</body>
+</html>

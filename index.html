@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benvenuti nel Mondo dei Carlini!</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .welcome-section {
+            text-align: center;
+        }
+        .welcome-section img {
+            max-width: 350px;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .features-links {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .feature-link-item {
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            width: calc(33% - 40px); /* Circa un terzo, considerando i margini */
+            min-width: 250px; /* Minima larghezza per item */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        .feature-link-item h3 {
+            color: #337ab7; /* Un blu carino per i titoli */
+            margin-bottom: 10px;
+        }
+        .feature-link-item p {
+            font-size: 0.95em;
+            margin-bottom: 15px;
+        }
+        .feature-link-item a.btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #5cb85c;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .feature-link-item a.btn:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Il Fantastico Mondo dei Carlini</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="storia.html">Storia</a></li>
+                <li><a href="galleria.html">Galleria</a></li>
+                <li><a href="giochi.html">Minigiochi</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="welcome-section">
+            <h2>Benvenuti, Amanti dei Carlini!</h2>
+            <p>Questo sito è un piccolo omaggio a una delle razze canine più amate e caratteristiche: il Carlino!</p>
+            <p>Esplora le nostre sezioni per scoprire la loro affascinante storia, ammirare le loro foto più belle e divertirti con alcuni simpatici minigiochi a tema.</p>
+            <img src="images/galleria_pug_fulvo1.jpg" alt="Benvenuto Carlino Felice">
+        </section>
+
+        <section class="features-links">
+            <div class="feature-link-item">
+                <h3>La Storia dei Carlini</h3>
+                <p>Scopri le origini antiche e le curiose vicende che hanno reso i Carlini così speciali.</p>
+                <a href="storia.html" class="btn">Leggi la Storia</a>
+            </div>
+            <div class="feature-link-item">
+                <h3>Galleria Fotografica</h3>
+                <p>Una collezione di immagini che catturano la dolcezza e la simpatia dei Carlini.</p>
+                <a href="galleria.html" class="btn">Guarda le Foto</a>
+            </div>
+            <div class="feature-link-item">
+                <h3>Minigiochi Carlinosi</h3>
+                <p>Metti alla prova la tua conoscenza e divertiti con i nostri giochi a tema Carlino!</p>
+                <a href="giochi.html" class="btn">Gioca Ora</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Il Mondo dei Carlini. Contenuti a scopo dimostrativo. Crediti immagini: Wikimedia Commons, Pixabay.</p>
+    </footer>
+</body>
+</html>

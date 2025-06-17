@@ -1,0 +1,409 @@
+/* === RESET BASE === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fdf8f0; /* Un crema chiaro per lo sfondo */
+    padding: 0; /* Rimuoviamo il padding dal body, lo gestiamo nei container */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* === HEADER === */
+header {
+    background: #e88131; /* Un arancione caldo per i carlini */
+    color: #fff;
+    padding: 1rem 20px; /* Aggiunto padding laterale */
+    text-align: center;
+    border-bottom: 3px solid #c66a22; /* Bordo inferiore più scuro */
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 12px; /* Aumentato margine */
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active { /* Per una futura implementazione di link attivo */
+    background-color: #c66a22; /* Arancione più scuro per hover/attivo */
+}
+
+/* === MAIN CONTENT === */
+main {
+    flex: 1; /* Fa in modo che main occupi lo spazio disponibile */
+    width: 90%;
+    max-width: 1100px;
+    margin: 20px auto; /* Centra e aggiunge margine sopra/sotto */
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+main h2 {
+    color: #e88131;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2em;
+}
+
+/* === FOOTER === */
+footer {
+    text-align: center;
+    margin-top: auto; /* Spinge il footer in basso */
+    padding: 20px;
+    background: #333;
+    color: #f2f2f2; /* Grigio chiaro per il testo del footer */
+    font-size: 0.9em;
+}
+
+/* === ELEMENTI COMUNI (Bottoni, ecc.) === */
+.btn, button.quiz-button, button.memory-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.btn:hover, button.quiz-button:hover, button.memory-button:hover {
+    transform: translateY(-2px); /* Leggero effetto al passaggio del mouse */
+}
+
+/* Colori specifici per tipo di bottone */
+.btn-green, button.quiz-button { /* Quiz button usa questo */
+    background-color: #5cb85c; /* Verde */
+}
+.btn-green:hover, button.quiz-button:hover {
+    background-color: #4cae4c;
+}
+
+.btn-orange, button.memory-button { /* Memory button usa questo */
+    background-color: #f0ad4e; /* Arancione */
+}
+.btn-orange:hover, button.memory-button:hover {
+    background-color: #ec9a29;
+}
+
+
+/* === STILI PER INDEX.HTML (Feature Links) === */
+.welcome-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.welcome-section img {
+    max-width: 300px; /* Ridotta un po */
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.features-links {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.feature-link-item {
+    background-color: #fdfdfd; /* Un bianco leggermente off */
+    border: 1px solid #eaeaea;
+    padding: 25px;
+    margin: 10px;
+    border-radius: 8px;
+    width: calc(33.333% - 30px); /* Circa un terzo, considerando i margini */
+    min-width: 280px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.07);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.feature-link-item h3 {
+    color: #e88131;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+.feature-link-item p {
+    font-size: 1em;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Fa crescere il paragrafo per riempire spazio */
+}
+.feature-link-item a.btn { /* Usa la classe .btn definita sopra */
+    align-self: center; /* Centra il bottone se il testo sopra è corto */
+}
+
+
+/* === STILI PER STORIA.HTML === */
+.history-section article { /* Assumendo che il contenuto sia in un article */
+    line-height: 1.7;
+}
+.history-section img {
+    max-width: 100%; /* Responsive */
+    height: auto;
+    max-height: 350px; /* Limite altezza */
+    display: block; /* Per centrare con margin auto */
+    margin: 20px auto; /* Centra e aggiunge spazio */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.history-section .img-container { /* Se usi un div per contenere img e didascalia */
+    text-align: center;
+    margin-bottom: 25px;
+}
+.history-section .img-container p small {
+    font-size: 0.85em;
+    color: #555;
+    font-style: italic;
+}
+
+/* === STILI PER GALLERIA.HTML === */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 10px 0; /* Rimosso padding laterale, gestito da main */
+}
+.gallery-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    width: 260px; /* Leggermente più grande */
+}
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block; /* Rimuove spazio extra sotto l immagine */
+}
+.gallery-item p {
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 8px;
+    color: #444;
+    padding: 0 5px; /* Un po di padding per la didascalia */
+}
+
+/* === STILI PER GIOCHI.HTML (QUIZ) === */
+#quiz-section, #memory-section {
+    background-color: #f9f9f9; /* Sfondo leggermente diverso per le sezioni gioco */
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.08);
+}
+#quiz-section h3, #memory-section h3 {
+    text-align: center;
+    color: #e88131;
+    margin-bottom: 20px;
+    font-size: 1.6em;
+}
+
+.quiz-question-container {
+    font-size: 1.25em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+}
+
+.quiz-options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Spazio tra i bottoni opzione */
+}
+
+.quiz-options-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #e9e9e9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 1em;
+    transition: background-color 0.2s ease;
+}
+.quiz-options-container button:hover {
+    background-color: #dcdcdc;
+}
+.quiz-options-container button.selected {
+    background-color: #a8d8ea; /* Un blu più tenue per selezione */
+    border-color: #85c3d9;
+}
+.quiz-options-container button.correct {
+    background-color: #a3d9a5;
+    border-color: #7fbf82;
+    color: #155724; /* Testo più scuro per leggibilità */
+}
+.quiz-options-container button.incorrect {
+    background-color: #f7a1a3;
+    border-color: #e88082;
+    color: #721c24; /* Testo più scuro per leggibilità */
+}
+
+.quiz-feedback, .quiz-score, .memory-feedback, .memory-info {
+    margin-top: 20px;
+    font-size: 1.15em;
+    font-weight: bold;
+    text-align: center;
+    min-height: 25px; /* Per evitare salti di layout */
+}
+.quiz-score { color: #337ab7; }
+.memory-info { color: #555; margin-bottom: 20px;}
+.memory-info span { margin: 0 15px; }
+
+
+/* === STILI PER GIOCHI.HTML (MEMORY) === */
+.memory-grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 12px;
+    justify-content: center;
+    margin: 25px auto; /* Aumentato margine */
+    max-width: 468px; /* (100px * 4) + (12px * 3) */
+}
+
+.memory-card {
+    width: 100px;
+    height: 100px;
+    background-color: #e88131; /* Colore dorso arancione */
+    border: 2px solid #c66a22;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+    transition: transform 0.5s; /* Rallentata per un effetto flip più visibile */
+    transform-style: preserve-3d; /* Necessario per l effetto flip su alcuni browser */
+}
+.memory-card img {
+    max-width: 90%;
+    max-height: 90%;
+    display: none;
+    border-radius: 4px;
+    backface-visibility: hidden; /* Nasconde il retro dell immagine durante il flip */
+}
+
+.memory-card.flipped {
+    background-color: #fff;
+    transform: rotateY(180deg); /* Effetto flip */
+}
+.memory-card.flipped img {
+    display: block;
+    transform: rotateY(180deg); /* Contro-ruota l immagine per mostrarla dritta */
+}
+.memory-card.matched {
+    background-color: #f0e68c; /* Un giallo tenue per le carte abbinate */
+    border-color: #e6d96a;
+    cursor: default;
+    transform: rotateY(180deg); /* Mantienile girate */
+}
+.memory-card.matched img {
+    display: block; /* Assicura che l immagine sia visibile */
+    transform: rotateY(180deg);
+}
+
+.memory-card:not(.flipped):not(.matched):hover {
+    opacity: 0.9;
+}
+
+/* Media Queries per responsività base */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    header nav ul li {
+        margin: 0 8px;
+    }
+    header nav ul li a {
+        font-size: 1em;
+    }
+
+    main {
+        width: 95%;
+        padding: 20px;
+    }
+    main h2 {
+        font-size: 1.8em;
+    }
+
+    .features-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    .feature-link-item {
+        width: 90%;
+        max-width: 400px; /* Limite per item su mobile */
+        margin-bottom: 20px;
+    }
+
+    .gallery-item {
+        width: calc(50% - 20px); /* Due immagini per riga su tablet */
+    }
+
+    .memory-grid-container {
+        /* Potremmo voler cambiare le colonne per schermi più piccoli, es. 3 colonne */
+        /* grid-template-columns: repeat(3, minmax(80px, 1fr)); */
+        /* max-width: 340px; /* (100 * 3) + (10 * 2) se 3 colonne da 100px */
+        /* Per ora manteniamo 4, ma con card più piccole se necessario */
+         grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+         max-width: 400px; /* Adattabile */
+         gap: 8px;
+    }
+    .memory-card {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        width: calc(100% - 20px); /* Un immagine per riga su mobile */
+    }
+     .memory-grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+        max-width: 300px; /* Adattabile */
+    }
+    .memory-card {
+        width: 70px;
+        height: 70px;
+    }
+}
