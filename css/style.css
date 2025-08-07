@@ -84,7 +84,7 @@ footer {
 }
 
 /* === ELEMENTI COMUNI (Bottoni, ecc.) === */
-.btn, button.quiz-button, button.memory-button {
+.btn, button.quiz-button, button.memory-button, button.guess-button {
     display: inline-block;
     padding: 10px 20px;
     font-size: 1em;
@@ -98,7 +98,7 @@ footer {
     transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
-.btn:hover, button.quiz-button:hover, button.memory-button:hover {
+.btn:hover, button.quiz-button:hover, button.memory-button:hover, button.guess-button:hover {
     transform: translateY(-2px); /* Leggero effetto al passaggio del mouse */
 }
 
@@ -110,6 +110,13 @@ footer {
     background-color: #4cae4c;
 }
 
+
+.btn-blue, button.guess-button { /* Guess button usa questo */
+    background-color: #337ab7; /* Blu */
+}
+.btn-blue:hover, button.guess-button:hover {
+    background-color: #285f8e;
+}
 .btn-orange, button.memory-button { /* Memory button usa questo */
     background-color: #f0ad4e; /* Arancione */
 }
@@ -221,14 +228,14 @@ footer {
 }
 
 /* === STILI PER GIOCHI.HTML (QUIZ) === */
-#quiz-section, #memory-section {
+#quiz-section, #memory-section, #guess-section {
     background-color: #f9f9f9; /* Sfondo leggermente diverso per le sezioni gioco */
     padding: 25px;
     margin-top: 25px;
     border-radius: 8px;
     box-shadow: 0 0 12px rgba(0,0,0,0.08);
 }
-#quiz-section h3, #memory-section h3 {
+#quiz-section h3, #memory-section h3, #guess-section h3 {
     text-align: center;
     color: #e88131;
     margin-bottom: 20px;
@@ -278,7 +285,7 @@ footer {
     color: #721c24; /* Testo più scuro per leggibilità */
 }
 
-.quiz-feedback, .quiz-score, .memory-feedback, .memory-info {
+.quiz-feedback, .quiz-score, .memory-feedback, .memory-info, .guess-feedback, .guess-info {
     margin-top: 20px;
     font-size: 1.15em;
     font-weight: bold;
